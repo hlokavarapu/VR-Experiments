@@ -5,15 +5,15 @@
     <title>Hello, WebVR! • A-Frame</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="bundle.js"></script>
-    <script src="https://unpkg.com/aframe-teleport-controls/dist/aframe-teleport-controls.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
   </head>
     <body>
-    <a-scene camera-transform-controls>
+    <a-scene physics>
       <a-entity id="cameraRig">
           <!-- camera -->
-          <a-entity id="camera" camera ></a-entity>
+          <a-entity id="camera" camera look-controls wasd-controls></a-entity>
           <a-entity id="lefthand" vive-controls="hand:left" laser-controls="hand:left"></a-entity>
-          <a-entity id="righthand" vive-controls="hand:right" teleport-controls></a-entity>
+          <a-entity id="righthand" vive-controls="hand:right" sphere-collider grab throw></a-entity>
       </a-entity>
 
       <a-sky src="images/space/MilkyWayBulge.png" rotation="0 -130 0"></a-sky>
@@ -22,8 +22,10 @@
         <a-asset-item id="SciFiHelmet" src="models/SciFiHelmet/SciFiHelmet.gltf">
         <a-asset-item id="Phoenix" src="/models/Phoenix/scene.gltf">
       </a-assets>
-      <a-gltf-model src="#SciFiHelmet"></a-gltf-model>
-      <a-gltf-model src="#Phoenix" animation-mixer></a-gltf-model>
+      <!-- <a-gltf-model src="#SciFiHelmet"></a-gltf-model> -->
+      <!-- <a-gltf-model src="#Phoenix" animation-mixer></a-gltf-model> -->
+
+      <a-box position="0 0.5 0" rotation="0 45 0" color="#4CC3D9"></a-box>
     </a-scene>
 </body>
 </html>
