@@ -5,14 +5,15 @@
     <title>Hello, WebVR! • A-Frame</title>
     <meta name="description" content="Hello, WebVR! • A-Frame">
     <script src="bundle.js"></script>
+    <script src="https://unpkg.com/aframe-teleport-controls/dist/aframe-teleport-controls.min.js"></script>
   </head>
     <body>
     <a-scene camera-transform-controls>
       <a-entity id="cameraRig">
           <!-- camera -->
           <a-entity id="camera" camera ></a-entity>
-          <a-entity id="lefthand" camera-transform-controls-hand="hand:left" vive-controls="hand:left" laser-controls="hand:left"></a-entity>
-          <a-entity id="righthand" camera-transform-controls-hand="hand:right" vive-controls="hand:right"></a-entity>
+          <a-entity id="lefthand" vive-controls="hand:left" laser-controls="hand:left"></a-entity>
+          <a-entity id="righthand" vive-controls="hand:right" teleport-controls></a-entity>
       </a-entity>
 
       <a-sky src="images/space/MilkyWayBulge.png" rotation="0 -130 0"></a-sky>
@@ -22,7 +23,7 @@
         <a-asset-item id="Phoenix" src="/models/Phoenix/scene.gltf">
       </a-assets>
       <a-gltf-model src="#SciFiHelmet"></a-gltf-model>
-      <a-gltf-model src="#Phoenix"></a-gltf-model>
+      <a-gltf-model src="#Phoenix" animation-mixer></a-gltf-model>
     </a-scene>
 </body>
 </html>
