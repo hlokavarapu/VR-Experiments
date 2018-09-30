@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "budo index.js:bundle.js --live"
+    "start": "budo index.js:bundle.js --live",
+    "build": "browserify index.js > bundle.js",
+    "preghpages": "node ./scripts/preghpages.js",
+    "ghpages": "ghpages -p gh-pages/"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,7 @@
   "homepage": "https://github.com/hlokavarapu/VR-Experiments#readme",
   "dependencies": {
     "browserify": "^16.2.3",
-    "budo": "^11.3.2"
+    "budo": "^11.3.2",
+    "ghpages": "0.0.10"
   }
 }
