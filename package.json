@@ -1,0 +1,23 @@
+{
+  "name": "vr-experiments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo index.js:bundle.js --live"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hlokavarapu/VR-Experiments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hlokavarapu/VR-Experiments/issues"
+  },
+  "homepage": "https://github.com/hlokavarapu/VR-Experiments#readme",
+  "dependencies": {
+    "browserify": "^16.2.3",
+    "budo": "^11.3.2"
+  }
+}
